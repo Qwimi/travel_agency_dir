@@ -1,14 +1,21 @@
 @props(['tour'])
 
-<div>
-    <p>
-        {{$tour->name}}
-    </p>
-    <p>
-        {{$tour->location}}
-    </p>
-    <p>
-        {{$tour->price}} руб. с человека
-    </p>
-    <img src="{{asset($tour->img)}}" alt="" height="100" width="100">
+<div class="card-item shadow">
+    <div class="img-wrapper">
+        <img src="{{asset($tour->img)}}" alt="">
+    </div>
+    <div class="card-description">
+        <p class="card-title">
+            {{$tour->name}}
+        </p>
+        <p>
+            {{$tour->location}}
+        </p>
+        <p class="price-row">
+            <span>
+                {{$tour->price}}
+            </span>
+            руб. с человека
+        </p>
+    </div>
 </div>

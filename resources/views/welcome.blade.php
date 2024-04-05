@@ -16,10 +16,12 @@
 
 
     <div class="py-12">
-        <div class="banner max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            @foreach($tours as $tour)
-            <x-card-item :tour="$tour" />
-            @endforeach
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="card-container">
+                @foreach($tours as $tour)
+                <x-card-item :tour="$tour" />
+                @endforeach
+            </div>
         </div>
     </div>
 </x-app-layout>

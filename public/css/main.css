@@ -109,7 +109,7 @@ button,
 }
 
 .banner .title span {
-    border-bottom: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--secondary-color);
     font-size: 1.25em;
 }
 
@@ -156,7 +156,49 @@ main {
     font-size: 0.75rem;
 }
 
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+}
 
+.card-item {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 0.5rem;
+    font-size: 0.75rem;
+}
+
+.card-item .img-wrapper {
+    aspect-ratio: 22/15;
+    width: 100%;
+    height: auto;
+}
+
+
+.card-item .card-description {
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.card-description .card-title {
+    font-size: 1.25em;
+    font-weight: 700;
+}
+
+.price-row {
+    color: var(--secondary-text-color);
+}
+
+.price-row span {
+    color: var(--primary-color);
+    font-size: 1.25em;
+    font-weight: 700;
+}
 
 @media (min-width: 640px) {
     .banner {
@@ -183,5 +225,11 @@ main {
 
     .form-wrapper .img-wrapper {
         display: block;
+    }
+
+
+    .card-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.5rem;
     }
 }
