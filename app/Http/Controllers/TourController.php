@@ -9,7 +9,7 @@ class TourController extends Controller
 {
     public function mainPage()
     {
-        $tours = Tour::all();
+        $tours = Tour::select('*')->take(3)->get();
         return view('welcome', compact('tours'));
     }
 }
