@@ -11,11 +11,20 @@
         <p>
             {{$tour->location}}
         </p>
-        <p class="price-row">
-            <span>
-                {{$tour->price}}
-            </span>
-            руб. с человека
-        </p>
+        <div class="price-row">
+            <div>
+                <p class="price">
+                    {{$tour->price}}
+                </p>
+                <p class="per-human">
+                    руб. с человека
+                </p>
+            </div>
+            @if (Auth::check())
+            <div>
+                <a href="" class="link-like-button">Еду!</a>
+            </div>
+            @endif
+        </div>
     </div>
 </div>

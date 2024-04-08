@@ -12,4 +12,10 @@ class TourController extends Controller
         $tours = Tour::select('*')->take(3)->get();
         return view('welcome', compact('tours'));
     }
+
+    public function tourPage()
+    {
+        $tours = Tour::all();
+        return view('dashboard', compact('tours'));
+    }
 }

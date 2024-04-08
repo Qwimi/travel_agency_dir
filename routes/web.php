@@ -20,9 +20,10 @@ Route::get(
     [TourController::class, 'mainPage']
 )->name('main');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::get(
+    '/dashboard',
+    [TourController::class, 'tourPage']
+)->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
