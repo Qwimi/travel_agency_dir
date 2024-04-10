@@ -5,21 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Tour extends Model
+class Image extends Model
 {
     use HasFactory;
-
     protected $fillable = [
-        'name',
-        'location',
-        'price',
-        'img',
+        'url'
     ];
 
     public $timestamps = false;
-
-    // public function tours()
-    // {
-    //     return $this->all();
-    // }
 }

@@ -14,11 +14,11 @@
         <div class="price-row">
             <div>
                 <p class="price">
-                    {{$tour->price}}
+                    {{$tour->price}} руб.
                 </p>
-                <p class="per-human">
+                <!-- <p class="per-human">
                     руб. с человека
-                </p>
+                </p> -->
             </div>
             @if (Auth::check())
             <div>
