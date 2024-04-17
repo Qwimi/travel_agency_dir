@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RequestController;
 use App\Http\Controllers\TourController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,4 +32,16 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+Route::get('/request/{id}', [RequestController::class, 'create'])->name('req');
+Route::resource('request', RequestController::class);
+
+
+// 1- execute composer install
+
+// 2- rename .env.example to .env and updated it with your database credentials
+
+// 3- php artisan key:generate
+
+// 4- php artisan serve
 require __DIR__ . '/auth.php';

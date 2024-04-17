@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Food;
+use App\Models\Foods;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -16,10 +16,10 @@ class CreateFoodSeeder extends Seeder
     public function run()
     {
         //
-        Food::create(['name' => 'Трехразовое питание']);
-        Food::create(['name' => 'Пятиразовое питание']);
-        Food::create(['name' => 'Без питания']);
-        Food::create(['name' => 'Только завтрак']);
-        Food::create(['name' => 'Только ужин']);
+        Foods::create(['name' => 'Трехразовое питание']);
+        Foods::create(['name' => 'Пятиразовое питание']);
+        Foods::create(['name' => 'Только завтрак']);
+        Foods::create(['name' => 'Только ужин']);
+        Foods::create(['name' => 'Предпочитаю заботиться о своём питании самостоятельно']);
     }
 }

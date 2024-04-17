@@ -204,7 +204,7 @@ main {
 }
 
 .price-row .price {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-size: 1.25em;
     font-weight: 700;
 }

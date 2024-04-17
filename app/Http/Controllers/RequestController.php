@@ -2,21 +2,27 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Foods;
+use App\Models\Hotel;
+use App\Models\Tour;
 use Illuminate\Http\Request;
 
 class RequestController extends Controller
 {
-    //
-    // public function create(): View
+
+    public function create($id)
+    {
+        $tour = Tour::find($id);
+        $food = Foods::all();
+        $hotel = Hotel::all();
+
+        return view('createReques', compact(['tour', 'food', 'hotel']));
+    }
+
+    // public function store(Request $request)
     // {
-    //     return view('auth.register');
     // }
 
-    // /**
-    //  * Handle an incoming registration request.
-    //  *
-    //  * @throws \Illuminate\Validation\ValidationException
-    //  */
     // public function store(Request $request): RedirectResponse
     // {
     //     $request->validate([

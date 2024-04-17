@@ -12,8 +12,14 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
+    // php artisan db:seed
+
     public function run()
     {
+        $this->call(CreateFoodSeeder::class);
+        $this->call(CreateHotelSeeder::class);
+        $this->call(CreateImageSeeder::class);
+        $this->call(CreateTourSeeder::class);
         // \App\Models\User::factory(10)->create();
     }
 }

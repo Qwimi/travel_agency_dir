@@ -22,7 +22,7 @@
             </div>
             @if (Auth::check())
             <div>
-                <a href="" class="link-like-button">Еду!</a>
+                <a href="{{route('req', ['id' => $tour->id])}}" class="link-like-button">Еду!</a>
             </div>
             @endif
         </div>
