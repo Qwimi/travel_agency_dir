@@ -6,6 +6,7 @@ use App\Models\Foods;
 use App\Models\Hotel;
 use App\Models\Tour;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Route;
 
 class RequestController extends Controller
 {
@@ -19,9 +20,10 @@ class RequestController extends Controller
         return view('createReques', compact(['tour', 'food', 'hotel']));
     }
 
-    // public function store(Request $request)
-    // {
-    // }
+    public function store(Request $request)
+    {
+        return redirect()->route('main');
+    }
 
     // public function store(Request $request): RedirectResponse
     // {
